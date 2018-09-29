@@ -8,7 +8,8 @@ export default withAuth(class Home extends Component {
     super(props);
     this.state = { authenticated: null };
     this.checkAuthentication = this.checkAuthentication.bind(this);
-    this.checkAuthentication();
+    console.log('func',this.checkAuthentication)
+    this.checkAuthentication().then((i) => console.log('!!!!', i));
     this.login = this.login.bind(this);
     this.logout = this.logout.bind(this);
   }
@@ -26,12 +27,12 @@ export default withAuth(class Home extends Component {
 
   async login() {
     // Redirect to '/' after login
-    this.props.login('/');
+    this.props.auth.login('/');
   }
 
   async logout() {
     // Redirect to '/' after logout
-    this.props.logout('/');
+    this.props.auth.logout('/');
   }
 
   render() {

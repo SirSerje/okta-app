@@ -7,8 +7,8 @@ import Home from './Home';
 
 const config = {
   issuer: 'https://dev-833658.oktapreview.com/oauth2/default',
-  redirect_uri: window.location.origin + '/implicit/callback',
-  client_id: '{clientId}'
+  redirect_uri: window.location.origin+'/implicit/callback',
+  client_id: '0oagev2bmgLHlvcPU0h7'
 }
 
 class App extends Component {
